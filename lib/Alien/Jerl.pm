@@ -10,12 +10,12 @@ $VERSION     = '1.0';
 %EXPORT_TAGS = ( ':all' => \@EXPORT );
 
 sub jerlMissingJVMMessage {
-   return 'could not execute java -jar jerl.jar -v';
+   return 'could not execute java -jar lib/Alien/jerl.jar -v';
 }
 
 sub jerlVersion {
   
-    my $jarVersion = `java -jar lib/alien/jerl.jar -v` || jerlMissingJVMMessage();
+    my $jarVersion = `java -jar lib/Alien/jerl.jar -v` || jerlMissingJVMMessage();
     
     return $jarVersion;    
 
